@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}   
+<div style="text-align : center">
+    <h4>
+        {% if user.is_authenticated %}
+        {{user.username}}
+        {% endif %}
+    </h4>
+    <h1>반갑습니다! {{userName}}님</h1>
+</div>
+{% endblock %}

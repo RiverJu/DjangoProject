@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}   
+<div style="text-align: center">
+    <h1>WordCount 페이지</h1>
+    <br>
+    <h3>여기에 문장을 입력해주세요.</h3>
+    <form action="result"><!--result는 url에서 result.html로 갈 수 있게 해주는 name-->
+        <textarea name="sentence" cols="60" rows="30"></textarea> <!--name이 sentence여야지 views에서 변수를 읽어서 wordcount함-->
+        <br>
+        <br>
+        <input type="submit" value="제출">
+    </form>
+</div>
+{% endblock %}

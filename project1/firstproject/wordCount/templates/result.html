@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}   
+<div style="text-align: center">
+    <h2>입력한 텍스트 전문</h2>
+    <div>
+        {{fulltext}}
+    </div>
+
+    <h3>당신이 입력한 텍스트는 {{wordcount}}개의 단어로 구성되어 있습니다.</h3>
+
+    <div>
+        <!--for 변수 word, totalCount는 wordDict 딕셔너리에서 key와 vaule를 넣어주기 위해-->
+        {% for word, totalCount in wordDict %}
+            {{word}} : {{totalCount}}
+            <br>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}   
+<div style="text-align: center">
+    <h4>
+        {% if user.is_authenticated %}
+        {{user.university}} 다니는 {{user.nickname}}님 {{user.location}} 위치
+        {% endif %}
+    </h4>
+    
+    <h1>사용자의 이름을 입력해주세요</h1>
+    <br>
+    <form action="hello">
+        <label for="nameInput">이름: </label>
+        <input id="nameInput" name="name">
+        <input type="submit" value="제출">
+    </form>
+</div>
+{% endblock %}
