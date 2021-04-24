@@ -9,5 +9,5 @@ def about(request):
 
 def result(request):
     text = request.GET['fulltext']
-    string.split()
+    text.split()
     return render(request, 'result.html', {'full':text})
