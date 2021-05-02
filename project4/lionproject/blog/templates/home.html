@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Blog project home</h1>
+    <div class="container">
+        {% for blog in blogs %}
+            <div>
+                <h3>[{{blog.id}}] {{blog.title}}</h3>
+                <h5>{{blog.writer}}</h5>
+                <h4>{{blog.summary}} <a href="{% url 'detail' blog.id %}">...more</a></h4>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
